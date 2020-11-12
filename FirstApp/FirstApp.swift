@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+//import PartialSheet
 
+import PartialSheet
 
 
 @main
@@ -16,9 +18,13 @@ struct FirstApp: App {
         print("__init__")
     }
     
+    let sheetManager: PartialSheetManager = PartialSheetManager()
+
+    
     var body: some Scene {
         WindowGroup {
             TestView1()
+//                .environmentObject(sheetManager)
 //            LandmarkList()
 //                .environmentObject(UserData())
         }
