@@ -39,6 +39,7 @@
 		3465D2CE255D0CA8001D119F /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 3465D2CD255D0CA8001D119F /* PartialSheet */; };
 		3465D2E3255D253E001D119F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465D2E2255D253E001D119F /* Data.swift */; };
 		3465D2EB255D2563001D119F /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3465D2EA255D2563001D119F /* landmarkData.json */; };
+		9D897D58255D3487000B593B /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 9D897D57255D3487000B593B /* BottomSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3465D2CE255D0CA8001D119F /* PartialSheet in Frameworks */,
+				9D897D58255D3487000B593B /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +259,7 @@
 			name = FirstApp;
 			packageProductDependencies = (
 				3465D2CD255D0CA8001D119F /* PartialSheet */,
+				9D897D57255D3487000B593B /* BottomSheet */,
 			);
 			productName = FirstApp;
 			productReference = 3465D1D0255985A8001D119F /* FirstApp.app */;
@@ -331,6 +334,7 @@
 			mainGroup = 3465D1C7255985A8001D119F;
 			packageReferences = (
 				3465D2CC255D0CA8001D119F /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				9D897D56255D3487000B593B /* XCRemoteSwiftPackageReference "bottom-sheet" */,
 			);
 			productRefGroup = 3465D1D1255985A8001D119F /* Products */;
 			projectDirPath = "";
@@ -730,6 +734,14 @@
 				minimumVersion = 2.1.11;
 			};
 		};
+		9D897D56255D3487000B593B /* XCRemoteSwiftPackageReference "bottom-sheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weitieda/bottom-sheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -737,6 +749,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3465D2CC255D0CA8001D119F /* XCRemoteSwiftPackageReference "PartialSheet" */;
 			productName = PartialSheet;
+		};
+		9D897D57255D3487000B593B /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D897D56255D3487000B593B /* XCRemoteSwiftPackageReference "bottom-sheet" */;
+			productName = BottomSheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
