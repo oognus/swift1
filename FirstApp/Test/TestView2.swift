@@ -11,26 +11,18 @@ struct TestView2: View {
     @State private var bottomSheetShown = false
     
     var body: some View {
-//        GeometryReader { geometry in
-//            Color.green
-//                .ignoresSafeArea()
-//            TestView3(isOpen: self.$bottomSheetShown, maxHeight: geometry.size.height) {
-//                VStack {
-//                    Text("test1")
-//                    Text("test2")
-//                }
-//
-//            }
-//        }.edgesIgnoringSafeArea(.all)
-        
-        Color.green
-            .ignoresSafeArea()
-        TestView3(isOpen: self.$bottomSheetShown, maxHeight: 600) {
-            VStack {
-                Text("test1")
-                Text("test2")
+        GeometryReader { geometry in
+            Color.green
+                .ignoresSafeArea()
+            TestView3(isOpen: self.$bottomSheetShown, maxHeight: geometry.size.height) {
+                VStack {
+                    Text("test1")
+                    Text("test2")
+                }
+
             }
         }.edgesIgnoringSafeArea(.all)
+        
     }
 }
 

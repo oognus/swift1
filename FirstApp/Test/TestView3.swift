@@ -48,57 +48,35 @@ struct TestView3<Content: View>: View {
     }
     
     var body: some View {
-//        GeometryReader { geometry in
-//            VStack(spacing: 0) {
-//                self.indicator.padding()
-//                self.content
-//            }
-//            .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
-//            .background(Color(.secondarySystemBackground))
-//            .cornerRadius(Constants.radius)
-//            .frame(height: geometry.size.height, alignment: .bottom)
-//            .offset(y: max(self.offset + self.translation, 0))
-//            .animation(.interactiveSpring())
-//            .gesture(
-//                DragGesture().updating(self.$translation) { value, state, _ in
-//                    state = value.translation.height
-//                }.onEnded { value in
-//                    let snapDistance = self.maxHeight * Constants.snapRatio
-//                    guard abs(value.translation.height) > snapDistance else {
-//                        return
-//                    }
-//                    self.isOpen = value.translation.height < 0
-//                }
-//            )
-//        }
-        
-        VStack {
-            self.indicator.padding()
-            self.content
-        }
-        .background(Color(.secondarySystemBackground))
-        .offset(y: max(self.offset + self.translation, 0))
-        .animation(.interactiveSpring())
-        .gesture(
-            DragGesture().updating(self.$translation) { value, state, _ in
-                state = value.translation.height
-            }.onEnded { value in
-                let snapDistance = self.maxHeight * Constants.snapRatio
-                guard abs(value.translation.height) > snapDistance else {
-                    return
-                }
-                self.isOpen = value.translation.height < 0
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                self.indicator.padding()
+                self.content
             }
-        )
+            .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(Constants.radius)
+            .frame(height: geometry.size.height, alignment: .bottom)
+            .offset(y: max(self.offset + self.translation, 0))
+            .animation(.interactiveSpring())
+            .gesture(
+                DragGesture().updating(self.$translation) { value, state, _ in
+                    state = value.translation.height
+                }.onEnded { value in
+                    let snapDistance = self.maxHeight * Constants.snapRatio
+                    guard abs(value.translation.height) > snapDistance else {
+                        return
+                    }
+                    self.isOpen = value.translation.height < 0
+                }
+            )
+        }
     }
 }
 
 struct TestView3_Previews: PreviewProvider {
     static var previews: some View {
-//        TestView3(isOpen: .constant(false), maxHeight: 600, minHeight: 300) {
-//            Rectangle().fill(Color.red)
-//        }.edgesIgnoringSafeArea(.all)
-        TestView3(isOpen: .constant(false), maxHeight: 100) {
+        TestView3(isOpen: .constant(false), maxHeight: 600) {
             Rectangle().fill(Color.red)
         }.edgesIgnoringSafeArea(.all)
     }
