@@ -39,6 +39,8 @@
 		3465D2CE255D0CA8001D119F /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 3465D2CD255D0CA8001D119F /* PartialSheet */; };
 		3465D2E3255D253E001D119F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465D2E2255D253E001D119F /* Data.swift */; };
 		3465D2EB255D2563001D119F /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3465D2EA255D2563001D119F /* landmarkData.json */; };
+		34F1F2072561132B000CC51F /* TestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1F2062561132B000CC51F /* TestView4.swift */; };
+		34F1F20C25611337000CC51F /* TestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1F20B25611337000CC51F /* TestView5.swift */; };
 		9D897D58255D3487000B593B /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 9D897D57255D3487000B593B /* BottomSheet */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		3465D2C7255C3E49001D119F /* TestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView3.swift; sourceTree = "<group>"; };
 		3465D2E2255D253E001D119F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3465D2EA255D2563001D119F /* landmarkData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		34F1F2062561132B000CC51F /* TestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView4.swift; sourceTree = "<group>"; };
+		34F1F20B25611337000CC51F /* TestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +240,9 @@
 			children = (
 				3465D2B9255AEBCF001D119F /* TestView1.swift */,
 				3465D2C1255AEBDA001D119F /* TestView2.swift */,
+				34F1F2062561132B000CC51F /* TestView4.swift */,
 				3465D2C7255C3E49001D119F /* TestView3.swift */,
+				34F1F20B25611337000CC51F /* TestView5.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -401,9 +407,11 @@
 				3465D2E3255D253E001D119F /* Data.swift in Sources */,
 				3465D2BA255AEBCF001D119F /* TestView1.swift in Sources */,
 				3465D20A25598723001D119F /* CircleImage.swift in Sources */,
+				34F1F20C25611337000CC51F /* TestView5.swift in Sources */,
 				3465D2A1255A3539001D119F /* SceneDelegate.swift in Sources */,
 				3465D24325598C35001D119F /* LandmarkRow.swift in Sources */,
 				3465D29C255A3517001D119F /* AppDelegate.swift in Sources */,
+				34F1F2072561132B000CC51F /* TestView4.swift in Sources */,
 				3465D21525598975001D119F /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FirstApp/Preview Content\"";
-				DEVELOPMENT_TEAM = X3R3Q6S42E;
+				DEVELOPMENT_TEAM = HPRL67P7XP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -585,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FirstApp/Preview Content\"";
-				DEVELOPMENT_TEAM = X3R3Q6S42E;
+				DEVELOPMENT_TEAM = HPRL67P7XP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

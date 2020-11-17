@@ -13,13 +13,10 @@ struct TestView2: View {
     var body: some View {
         GeometryReader { geometry in
             Color.green
-                .ignoresSafeArea()
-            TestView3(isOpen: self.$bottomSheetShown, maxHeight: geometry.size.height) {
-                VStack {
-                    Text("test1")
-                    Text("test2")
-                }
-
+            TestView3(
+                isOpen: self.$bottomSheetShown,
+                maxHeight: geometry.size.height) {
+                Color.blue
             }
         }.edgesIgnoringSafeArea(.all)
         

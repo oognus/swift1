@@ -11,7 +11,7 @@ fileprivate enum Constants {
     static let radius: CGFloat = 16
     static let indicatorHeight: CGFloat = 6
     static let indicatorWidth: CGFloat = 60
-    static let snapRatio: CGFloat = 0.1
+    static let snapRatio: CGFloat = 0.25
     static let minHeightRatio: CGFloat = 0.3
 }
 
@@ -26,8 +26,8 @@ struct TestView3<Content: View>: View {
     @GestureState private var translation: CGFloat = 0
     
     private var offset: CGFloat {
-       isOpen ? 0 : maxHeight - minHeight
-   }
+        isOpen ? 0 : maxHeight - minHeight
+    }
     
     private var indicator: some View {
         RoundedRectangle(cornerRadius: Constants.radius)
@@ -58,20 +58,16 @@ struct TestView3<Content: View>: View {
             .cornerRadius(Constants.radius)
             .frame(height: geometry.size.height, alignment: .bottom)
             .offset(y: max(self.offset + self.translation, 0))
-//            .animation(.interpolatingSpring(mass: 1, stiffness: 1, damping: 0.5, initialVelocity: 5))
-            .animation(.spring())
+//            .animation(.spring(response: 0.55, dampingFraction: 0.825, blendDuration: 0.0))
+            .animation(.interactiveSpring())
             .gesture(
                 DragGesture().updating(self.$translation) { value, state, _ in
                     state = value.translation.height
-                    print(state)
                 }.onEnded { value in
-                    print("onEnded")
                     let snapDistance = self.maxHeight * Constants.snapRatio
                     guard abs(value.translation.height) > snapDistance else {
-                        print("here")
                         return
                     }
-                    print(value.translation.height < 0)
                     self.isOpen = value.translation.height < 0
                 }
             )
